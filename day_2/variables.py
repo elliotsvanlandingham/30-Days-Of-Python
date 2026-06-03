@@ -27,6 +27,6 @@ full_name = "f{first_name} {last_name}"
 
 # Check data type for all variables
 
-print(type(first_name)
+print(type(first_name))
 # Print values stored in Variables
 
