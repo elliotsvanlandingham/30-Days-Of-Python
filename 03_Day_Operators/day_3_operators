@@ -1,0 +1,169 @@
+# Day 3 Operators
+age = 29
+height = 5.8
+thing = 1 + 2j
+#calculate the area of a triangle
+Base = 20
+Height = 10
+area_of_triangle = 0.5 * Base * Height
+print('Area of triangle: ', area_of_triangle)
+
+# Calculate the perimeter of a triangle
+side_a = 5
+side_b = 4
+side_c = 3
+perimeter_of_triangle = side_a + side_b + side_c
+print('Perimeter of triangle: ', perimeter_of_triangle) # The perimeter of the triangle is 12
+
+# Calculate the area and the perimeter of a rectangle
+length = 10
+width = 5
+area_of_rectangle = length * width
+perimeter_of_rectangle = 2 * (length + width)
+print('Area of rectangle: ', area_of_rectangle) # The area of the rectangle is 50
+print('Perimeter of rectangle: ', perimeter_of_rectangle) # The perimeter of the rectangle is 30
+
+# Calculate the area and the circumference of a circle
+import math
+radius = 7
+math.pi
+# area of a circle 
+area_of_circle = math.pi * radius ** 2
+print('Area of circle: ', area_of_circle) # The area of the circle is 153.93804002589985
+
+# circumference of a circle
+circumference_of_circle = 2 * math.pi * radius
+print('Circumference of circle: ', circumference_of_circle) # The circumference of the circle is 43.982297150257104
+
+# Find the slope and Euclidean distance between point (2, 2) and point (6,10)
+point_1 = (2, 2)
+point_2 = (6, 10)
+# Slope of a line
+slope = (point_2[1] - point_1[1]) / (point_2[0] - point_1[0])
+print('Slope of the line: ', slope) # The slope of the line is 2.0)
+
+# Euclidean distance between two points √((x2 - x1)² + (y2 - y1)²)
+euclidean_distance = math.sqrt((point_2[0] - point_1[0]) ** 2 + (point_2[1] - point_1[1]) ** 2)
+print('Euclidean distance between the points: ', euclidean_distance) # The Euclidean distance between the points is 8.94427190999916
+
+# The equation: 0 = x² + 6x + 9
+b = 6 # Middle number
+c = 9 # Last number
+
+print(f"Solving for x when: x² + {b}x + {c} = 0")
+
+# The fastest shortcut to solve this equation
+# 1. Cut the middle number in half
+half_b = b // 2
+
+# 2. Check if it's a perfecrt square
+if half_b * half_b  == c:
+    # 3. Flip the sign to get the solution
+    x = -half_b
+    print(f"Success! The value of x is: {x}")
+else:
+    print("This specific shortcut only works for perfect squares.")
+
+# Find the length of 'python' and 'dragon' and make a falsy comparison statement.
+python_len = len('python')
+dragon_len = len('dragon')
+
+print("Length of python", len('python'))
+print("Length of dragon", len('dragon'))
+
+python_len != dragon_len
+# # 2. Now that both variables equal 6, using '!=' means you are telling Python: 
+# "6 is not equal to 6". Since that is a lie, Python will return False!
+print("Is the comparison falsy?", python_len != dragon_len)
+
+# Use and operator to check if 'on' is found in both 'python' and 'dragon'
+
+print( "'on' is in python:", 'on' in 'python')
+print("'on' is in dragon:", 'on' in 'dragon')
+
+# "I hope this course is not full of jargon." Use in operator to check if jargon is in the sentence.
+
+sentence_1 = 'I hope this course is not full of jargon'
+
+# Checking for 'jargon'
+
+print("'jargon' is in  the sentence:", 'jargon' in 'I hope this course is not full of jargon')
+
+# There is no 'on' in both dragon and python
+print( "'on' is not in python:", 'on' not in 'python')
+print("'on' is  not in dragon:", 'on' not in 'dragon')
+
+# Find the length of the text python and convert the value to float and convert it to string
+print("Length of python", str(float(len('python'))))
+
+# Even numbers are divisible by 2 and the remainder is zero. How do you check if a number is even or not using python?
+numbers = [1, 2, 3, 4, 5]
+
+for num in numbers:
+    if num % 2 == 0:
+        print(f"{num} is an even number")
+    else:
+        print(f"{num} is an odd number")
+
+# Check if the floor division of 7 by 3 is equal to the int converted value of 2.7.
+floor = 7 // 3
+print('The answer is', float(floor))
+
+converted_val = int(2.7)
+
+print("the floor division of 7 by 3 is equal to the int converted value of 2.7:", floor == converted_val)
+
+# Check if type of '10' is equal to type of 10
+print("Check if type of '10' is equal to type of 10")
+if type(10) == type('10'):
+    print("Answer: The types are equal")
+else:
+    print("Answer: The types are not equal")
+
+# Check if int('9.8') is equal to 10
+
+print("Check if int('9.8') is equal to 10")
+try:
+    if int('9.8') == 10:
+        print("Answer: The types are equal")
+    else:
+        print("Answer: The types are not equal")
+except ValueError:
+     print("Answer: You cannot compare them because int('9.8') causes a ValueError.")
+
+# Write a script that prompts the user to enter hours and rate per hour. Calculate pay of the person?
+    #Prompt the user for imput
+# This is the standard, clean way to do it in Python
+hours_input = input("Enter Hours: ") 
+rate_input = input("Enter rate per Hour: ")
+
+hours = float(hours_input)
+rate_per_hour = float(rate_input)
+Weekly_Earnings = hours * rate_per_hour
+
+print("Weekly Earnings:", Weekly_Earnings)
+
+# Write a script that prompts the user to enter number of years. Calculate the number of seconds a person can live.
+#  Assume a person can live hundred years
+# Enter number of years you have lived: 100 You have lived for 3153600000 seconds.
+
+# 1. Print the prompt statement
+print("Enter Years: ")
+
+# 2. Pause and catch the input
+years_input = input()
+
+years_lived = int(years_input)
+total_seconds = 3153600000 // 100
+seconds_lived = years_lived * total_seconds
+
+print(f"Seconds Lived: {seconds_lived}")
+
+# Write a Python script that displays the following table
+# 1 1 1 1 1
+# 2 1 2 4 8
+# 3 1 3 9 27
+# 4 1 4 16 64
+
+for n in range(1, 6):
+    print(f"{n} {n**0} {n**1} {n**2} {n**3}")
